@@ -220,7 +220,8 @@ function applyTranslation(lang) {
     }    
     document.querySelector('meta[name="keywords"]').setAttribute('content', translations[lang].meta.keywords);
     document.title = translations[lang].meta.title;
-    document.querySelector('img[src="photo_2023-08-06_15-42-25 (70).jpg"]').setAttribute("alt", translations[lang].images.macbook_air_15);
+    document.querySelector('img[src="photo_2023-08-06_15-42-25 (80).jpg"]').setAttribute("alt", translations[lang].images["photo_2023-08-06_15-42-25 (80).jpg"]);
+
 
     document.querySelectorAll('img[alt="Bild von MacBook Air 15"]').forEach(img => {
         img.setAttribute('alt', translations[lang].images.macbook_air_15);
@@ -231,7 +232,8 @@ function applyTranslation(lang) {
     document.querySelector('#preorderContent p').textContent = translations[lang].content.p_description;
     document.querySelector('#preorderContent button').textContent = translations[lang].content.button_order;
 
-    document.querySelector('.promo-content h2').textContent = translations[lang].promo_content.h2;
+    document.querySelector('.promo-content h3:nth-of-type(1)').textContent = translations[lang].promo_content.h3_1;
+    document.querySelector('.promo-content h3:nth-of-type(2)').textContent = translations[lang].promo_content.h3_2;
     document.querySelector('.promo-content p:nth-child(2)').textContent = translations[lang].promo_content.p1;
     document.querySelector('.promo-content h3').textContent = translations[lang].promo_content.h3;
     document.querySelector('.promo-content p:nth-child(4)').textContent = translations[lang].promo_content.p2;
